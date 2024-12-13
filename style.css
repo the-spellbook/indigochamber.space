@@ -1,0 +1,63 @@
+canvas {
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    opacity: 100;
+    /* transition: opacity 1500ms ease-out; */
+}
+
+body { 
+    margin: 0; 
+    overflow: hidden;
+}
+
+aside {
+    width: 30%;
+    float: left;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+p {
+    font-size: small;
+    color:rgb(255, 245, 212);
+    font-family:'Courier New', Courier, monospace;
+}
+h3 {
+    color:rgb(255, 245, 212);
+    font-family:'Courier New', Courier, monospace;
+
+}
+a:link {
+    font-size: small;
+    color: rgb(255, 245, 212);
+    text-decoration: none;
+}
+a:visited {
+    font-size: small;
+    color: rgb(255, 245, 212);
+    text-decoration: none;
+}
+a:hover {
+    font-size: small;
+    color: rgb(255, 245, 212);
+    font-style: italic;
+    text-decoration: none;
+}
+a:active {
+    font-size: small;
+    color: rgb(255, 245, 212);
+    font-weight: 900;
+    text-decoration: none;
+}
+.content {
+    width: 40%;
+    float: left;
+}
+.text {
+    color:rgb(255, 245, 212);
+    font-family:'Courier New', Courier, monospace;
+}
