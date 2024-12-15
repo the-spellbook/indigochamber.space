@@ -35,23 +35,27 @@ a:link {
     font-size: small;
     color: rgb(255, 245, 212);
     text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
 }
 a:visited {
     font-size: small;
     color: rgb(255, 245, 212);
     text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
 }
 a:hover {
     font-size: small;
     color: rgb(255, 245, 212);
     font-style: italic;
     text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
 }
 a:active {
     font-size: small;
     color: rgb(255, 245, 212);
     font-weight: 900;
     text-decoration: none;
+    font-family:'Courier New', Courier, monospace;
 }
 .content {
     width: 40%;
