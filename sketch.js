@@ -133,6 +133,10 @@ function draw() {
 //     boxSize = 60;
 }
 
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+
 // function fallingstar() {
 //     let x1 = random(-1200, 1200);
 //     let y1 = random(-1200, 1200);
