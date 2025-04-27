@@ -133,15 +133,15 @@ function draw() {
 //     boxSize = 60;
 }
 
-function fallingstar() {
-    let x1 = random(-1200, 1200);
-    let y1 = random(-1200, 1200);
-    let z1 = random(-1200, 1200);
-    let x2 = random(-1200, 1200);
-    let y2 = random(-1200, 1200);
-    let z2 = random(-1200, 1200);
-}
-function mouseDragged() {
-    if (bgblue < 60) bgblue += 3;
-    background(-10+bgblue,-10+bgblue,bgblue);
-}
+// function fallingstar() {
+//     let x1 = random(-1200, 1200);
+//     let y1 = random(-1200, 1200);
+//     let z1 = random(-1200, 1200);
+//     let x2 = random(-1200, 1200);
+//     let y2 = random(-1200, 1200);
+//     let z2 = random(-1200, 1200);
+// }
+// function mouseDragged() {
+//     if (bgblue < 60) bgblue += 3;
+//     background(-10+bgblue,-10+bgblue,bgblue);
+// }
