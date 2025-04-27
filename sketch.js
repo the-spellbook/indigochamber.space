@@ -1,62 +1,4 @@
-// let canvas;
-// let amountStars = 100;
 
-// class Star {
-//     constructor(x, y, z) {
-//         this.x = (Math.random() - 0.5) * 100;
-//         this.y = (Math.random() - 0.5) * 100;
-//         this.z = (Math.random() - 0.5) * 100;
-//     }
-//     place() {
-//         pop();
-//         translate(this.x, this.y, this.z);
-//         sphere(4, 3);
-//     }
-// }
-
-// function setup() {
-//     noCursor();
-//     canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-//     canvas.parent('davotwo');
-//     canvas.style('z-index', '-1');
-//     canvas.position(0, 0);
-//     background(0,0,20);
-
-//     stroke(255,255,255);
-//     noStroke();
-//     fill(255);
-
-
-
-//     for (let i = 0; i < starAmount; i++) {
-        
-
-
-
-//     }
-
-//     pop();
-//     translate((Math.random() - 0.5) * 100, (Math.random() - 0.5) * 100, (Math.random() - 0.5) * 100);
-//     sphere(4, 3);
-// }
-  
-// function draw() {
-//   // camera(500*cos(frameCount * 0.001) - 250, 500*cos(frameCount * 0.001) - 250, 500*cos(frameCount * 0.001) - 250, 0, 0, 0);
-  
-//   // background(10, 10, 41);
-
-
-//   // circle(mouseX, mouseY, 5);
-
-
-    
-    
-    
-//     // sphere(2000);
-//     box(400);
-    // orbitControl();
-  
-// }
 
 let stars = [];
 let angle = 0;
@@ -125,23 +67,87 @@ function draw() {
 
     if (bgblue > 12) bgblue -= 2;
 
-
-
-
 // }
 // function mouseClicked() {
 //     boxSize = 60;
 }
 
-function fallingstar() {
-    let x1 = random(-1200, 1200);
-    let y1 = random(-1200, 1200);
-    let z1 = random(-1200, 1200);
-    let x2 = random(-1200, 1200);
-    let y2 = random(-1200, 1200);
-    let z2 = random(-1200, 1200);
+
+// function mouseDragged() {
+//     if (bgblue < 60) bgblue += 3;
+//     background(-10+bgblue,-10+bgblue,bgblue);
+// }
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
 }
-function mouseDragged() {
-    if (bgblue < 60) bgblue += 3;
-    background(-10+bgblue,-10+bgblue,bgblue);
-}
+
+
+// function fallingstar() {
+//     let x1 = random(-1200, 1200);
+//     let y1 = random(-1200, 1200);
+//     let z1 = random(-1200, 1200);
+//     let x2 = random(-1200, 1200);
+//     let y2 = random(-1200, 1200);
+//     let z2 = random(-1200, 1200);
+// }
+
+// let canvas;
+// let amountStars = 100;
+
+// class Star {
+//     constructor(x, y, z) {
+//         this.x = (Math.random() - 0.5) * 100;
+//         this.y = (Math.random() - 0.5) * 100;
+//         this.z = (Math.random() - 0.5) * 100;
+//     }
+//     place() {
+//         pop();
+//         translate(this.x, this.y, this.z);
+//         sphere(4, 3);
+//     }
+// }
+
+// function setup() {
+//     noCursor();
+//     canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+//     canvas.parent('davotwo');
+//     canvas.style('z-index', '-1');
+//     canvas.position(0, 0);
+//     background(0,0,20);
+
+//     stroke(255,255,255);
+//     noStroke();
+//     fill(255);
+
+
+
+//     for (let i = 0; i < starAmount; i++) {
+        
+
+
+
+//     }
+
+//     pop();
+//     translate((Math.random() - 0.5) * 100, (Math.random() - 0.5) * 100, (Math.random() - 0.5) * 100);
+//     sphere(4, 3);
+// }
+  
+// function draw() {
+//   // camera(500*cos(frameCount * 0.001) - 250, 500*cos(frameCount * 0.001) - 250, 500*cos(frameCount * 0.001) - 250, 0, 0, 0);
+  
+//   // background(10, 10, 41);
+
+
+//   // circle(mouseX, mouseY, 5);
+
+
+    
+    
+    
+//     // sphere(2000);
+//     box(400);
+    // orbitControl();
+  
+// }

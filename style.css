@@ -1,12 +1,22 @@
 div.allthings {
     width: 100%;
     font-size: 35;
-    margin: auto;
+    /* margin: auto; */
     text-align: center;
     font-family: "Perpetua";
     color: rgb(255, 247, 233);
     overflow-x: hidden;
     opacity: 1;
+}
+
+h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h5 {
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 h6 {
@@ -76,6 +86,10 @@ body {
     max-height: 80%;
     margin: auto;
 }
+
+/* html {
+    scroll-behavior: smooth;
+} */
 
 /* body {
     text-align: center;
