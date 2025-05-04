@@ -4,7 +4,8 @@ div.allthings {
     /* margin: auto; */
     text-align: center;
     font-family: "Perpetua";
-    color: rgb(255, 247, 233);
+    color: rgb(244, 233, 255);
+    /* color: rgb(255, 247, 233); */
     overflow-x: hidden;
     opacity: 1;
 }
@@ -63,6 +64,7 @@ p {
     margin: 5px;
     text-align: center;
     box-align: justify;
+    color: rgb(244, 233, 255);;
 }
 
 a {
@@ -71,7 +73,7 @@ a {
     text-align: center;
     box-align: justify;
     text-decoration: none;
-    color: rgb(255, 247, 233);
+    color: rgb(244, 233, 255);
 }
 
 a:link {
@@ -79,7 +81,7 @@ a:link {
     text-align: center;
     box-align: justify;
     text-decoration: none;
-    color: rgb(255, 247, 233);
+    color: rgb(244, 233, 255);
 }
 
 a:hover {
@@ -94,12 +96,12 @@ a:active {
     font-size: 20;
     text-align: center;
     box-align: justify;
-    color: rgb(255, 227, 180);
+    color: rgb(231, 206, 255);
 
 }
 
 a:visited {
-    color: rgb(255, 247, 233);
+    color: rgb(244, 233, 255);
     font-size: 20;
     text-align: center;
     box-align: justify;
