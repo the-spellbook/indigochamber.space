@@ -31,6 +31,7 @@ function draw() {
     //     timer = 0;
     // }
 
+    // oude html kleur:rgb(4, 1, 20)
 
 
     ambientLight(255);
