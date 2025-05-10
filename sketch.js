@@ -1,3 +1,109 @@
+
+let boxcolor = (40, 40, 40);
+let options = {
+    disableTouchActions: false, 
+    freeRotation: true
+}
+let stars = [];
+let angle = 0;
+let boxSize = 0;
+let timer = 0;
+let bgblue = 10;
+let fallingstartimer = Math.floor(Math.random() * 1001);
+
+function setup() {
+    noCursor();
+    canvas = createCanvas(windowWidth, windowHeight, WEBGL);
+    canvas.parent('sketch3d');  // Attach canvas to the div
+    canvas.style('position', 'fixed');  // Ensure canvas is fixed
+    canvas.style('top', '0');  // Align the canvas to the top of the page
+    canvas.style('left', '0');  // Align the canvas to the left of the page
+    canvas.style('z-index', '-1');  // Put the canvas behind the content
+
+    for (let i = 0; i < 1000; i++) {
+        let x = random(-1200, 1200);
+        let y = random(-1200, 1200);
+        let z = random(-1200, 1200);
+        stars.push(createVector(x, y, z));
+    }
+}
+
+
+let radius = 700-boxSize;
+let camX = radius * Math.cos(angle+90);
+let camZ = radius * Math.sin(angle+90);
+let camY = -500;
+
+function draw() {
+    // timer += 1;
+    // if (timer == 20) {
+        background(0,0,bgblue);
+    //     timer = 0;
+    // }
+
+    // oude html kleur:rgb(4, 1, 20)
+
+
+    ambientLight(255);
+
+
+
+
+
+    noStroke();
+    fill(boxcolor);
+    for (let star of stars) {
+        push();
+        translate(star.x, star.y, star.z);
+        if (Math.floor(Math.random() * 5001)< 2) {
+            fill(255);
+            cone(3);
+            fill(80);
+        } else { sphere(2); }
+        pop();
+    }
+    stroke(150);
+    noFill();
+
+    // if (boxSize > 0) boxSize -= 2;
+    stroke(boxcolor);
+    box(40);
+    
+    orbitControl();
+
+    if (boxcolor > 60) boxcolor -= 2;
+
+}
+
+// function mouseClicked() {
+//     boxcolor = 150;
+// }
+
+
+function mouseDragged() {
+    if (boxcolor < 230) boxcolor += 10;
+    // else {
+    // camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
+
+    // angle -= 0.0005;
+    // console.log("cool");
+    // }
+}
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+}
+
+
+// function fallingstar() {
+//     let x1 = random(-1200, 1200);
+//     let y1 = random(-1200, 1200);
+//     let z1 = random(-1200, 1200);
+//     let x2 = random(-1200, 1200);
+//     let y2 = random(-1200, 1200);
+//     let z2 = random(-1200, 1200);
+// }
+
 // let canvas;
 // let amountStars = 100;
 
@@ -56,96 +162,4 @@
 //     box(400);
     // orbitControl();
   
-// }
-
-let stars = [];
-let angle = 0;
-let boxSize = 0;
-let timer = 0;
-let bgblue = 10;
-let fallingstartimer = Math.floor(Math.random() * 1001);
-
-function setup() {
-    noCursor();
-    canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-    canvas.parent('sketch3d');  // Attach canvas to the div
-    canvas.style('position', 'fixed');  // Ensure canvas is fixed
-    canvas.style('top', '0');  // Align the canvas to the top of the page
-    canvas.style('left', '0');  // Align the canvas to the left of the page
-    canvas.style('z-index', '-1');  // Put the canvas behind the content
-
-    for (let i = 0; i < 1000; i++) {
-        let x = random(-1200, 1200);
-        let y = random(-1200, 1200);
-        let z = random(-1200, 1200);
-        stars.push(createVector(x, y, z));
-    }
-}
-
-function draw() {
-    // timer += 1;
-    // if (timer == 20) {
-        background(0,0,bgblue);
-    //     timer = 0;
-    // }
-
-
-
-    ambientLight(255);
-
-    let radius = 700-boxSize;
-    let camX = radius * cos(angle+90);
-    let camZ = radius * sin(angle+90);
-    let camY = -500;
-
-    camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
-
-    angle -= 0.0005;
-
-    noStroke();
-    fill(80);
-    for (let star of stars) {
-        push();
-        translate(star.x, star.y, star.z);
-        if (Math.floor(Math.random() * 5001)< 2) {
-            fill(255);
-            cone(3);
-            fill(80);
-        } else { sphere(2); }
-        pop();
-    }
-    stroke(150);
-    noFill();
-
-    // if (boxSize > 0) boxSize -= 2;
-    stroke(90);
-    box(40);
-    
-    // orbitControl();
-
-    if (bgblue > 12) bgblue -= 2;
-
-
-
-
-// }
-// function mouseClicked() {
-//     boxSize = 60;
-}
-
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
-}
-
-// function fallingstar() {
-//     let x1 = random(-1200, 1200);
-//     let y1 = random(-1200, 1200);
-//     let z1 = random(-1200, 1200);
-//     let x2 = random(-1200, 1200);
-//     let y2 = random(-1200, 1200);
-//     let z2 = random(-1200, 1200);
-// }
-// function mouseDragged() {
-//     if (bgblue < 60) bgblue += 3;
-//     background(-10+bgblue,-10+bgblue,bgblue);
 // }
