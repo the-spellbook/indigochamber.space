@@ -1,9 +1,5 @@
 
-let boxcolor = (40, 40, 40);
-let options = {
-    disableTouchActions: false, 
-    freeRotation: true
-}
+
 let stars = [];
 let angle = 0;
 let boxSize = 0;
@@ -14,7 +10,7 @@ let fallingstartimer = Math.floor(Math.random() * 1001);
 function setup() {
     noCursor();
     canvas = createCanvas(windowWidth, windowHeight, WEBGL);
-    canvas.parent('sketch3d');  // Attach canvas to the div
+    canvas.parent('sketch3d_movable');  // Attach canvas to the div
     canvas.style('position', 'fixed');  // Ensure canvas is fixed
     canvas.style('top', '0');  // Align the canvas to the top of the page
     canvas.style('left', '0');  // Align the canvas to the left of the page
@@ -28,12 +24,6 @@ function setup() {
     }
 }
 
-
-let radius = 700-boxSize;
-let camX = radius * Math.cos(angle+90);
-let camZ = radius * Math.sin(angle+90);
-let camY = -500;
-
 function draw() {
     // timer += 1;
     // if (timer == 20) {
@@ -46,12 +36,17 @@ function draw() {
 
     ambientLight(255);
 
+    // let radius = 700-boxSize;
+    // let camX = radius * cos(angle+90);
+    // let camZ = radius * sin(angle+90);
+    // let camY = -500;
 
+    // camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
 
-
+    // angle -= 0.0005;
 
     noStroke();
-    fill(boxcolor);
+    fill(180);
     for (let star of stars) {
         push();
         translate(star.x, star.y, star.z);
@@ -66,29 +61,23 @@ function draw() {
     noFill();
 
     // if (boxSize > 0) boxSize -= 2;
-    stroke(boxcolor);
+    stroke(180);
     box(40);
     
     orbitControl();
 
-    if (boxcolor > 60) boxcolor -= 2;
+    if (bgblue > 12) bgblue -= 2;
 
-}
-
-// function mouseClicked() {
-//     boxcolor = 150;
 // }
-
-
-function mouseDragged() {
-    if (boxcolor < 230) boxcolor += 10;
-    // else {
-    // camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
-
-    // angle -= 0.0005;
-    // console.log("cool");
-    // }
+// function mouseClicked() {
+//     boxSize = 60;
 }
+
+
+// function mouseDragged() {
+//     if (bgblue < 60) bgblue += 3;
+//     background(-10+bgblue,-10+bgblue,bgblue);
+// }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);

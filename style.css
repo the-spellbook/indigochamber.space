@@ -38,8 +38,8 @@ div.bgimage {
     /* min-height: 100%; */
     background-size: auto;
     background-repeat: repeat-y;
-    opacity: 0.05;
-    filter: contrast(110%), brightness(50%);
+    opacity: 0.3;
+    filter: brightness(100%) contrast(110%) hue-rotate(80deg);
 }
 
 h4 {
