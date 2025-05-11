@@ -36,14 +36,15 @@ function draw() {
 
     ambientLight(255);
 
-    // let radius = 700-boxSize;
-    // let camX = radius * cos(angle+90);
-    // let camZ = radius * sin(angle+90);
-    // let camY = -500;
+    let radius = 800-boxSize;
+    let camX = radius * cos(angle+90);
+    let camZ = radius * sin(angle+90);
+    let camY = -500;
 
-    // camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
+    camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
 
-    // angle -= 0.0005;
+    angle = (mouseX/windowWidth) * 0.1;
+    radius = (mouseY/windowHeight) * 0.01;
 
     noStroke();
     fill(180);
