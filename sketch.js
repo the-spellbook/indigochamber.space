@@ -34,6 +34,15 @@ let camX = radius * Math.cos(angle+90);
 let camZ = radius * Math.sin(angle+90);
 let camY = -500;
 
+function orbitControlJustLeftButton() {
+    // remove Wheel actions
+    this._setProperty('_pmouseWheelDeltaY', 0);
+    this._setProperty('_mouseWheelDeltaY', 0);  
+    // Just apply orbitControl on Left Button Actions
+    if (mouseButton == LEFT)
+       orbitControl();  
+ }
+
 function draw() {
     // timer += 1;
     // if (timer == 20) {
@@ -69,7 +78,8 @@ function draw() {
     stroke(boxcolor);
     box(40);
     
-    orbitControl();
+    // orbitControl();
+    orbitControlJustLeftButton();
 
     if (boxcolor > 60) boxcolor -= 2;
 
