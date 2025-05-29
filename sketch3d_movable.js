@@ -44,7 +44,7 @@ function draw() {
     camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
 
     angle = (mouseX/windowWidth) * 0.1;
-    radius = (mouseY/windowHeight) * 0.01;
+    radius = (mouseY/windowHeight) * 0.1;
 
     noStroke();
     fill(180);
