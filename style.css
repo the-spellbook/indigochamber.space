@@ -68,7 +68,7 @@ a:link {
     font-size: 20;
     text-align: center;
     box-align: justify;
-    text-decoration: none;
+    text-decoration: underline;
     color: rgb(244, 233, 255);
 }
 
@@ -84,8 +84,7 @@ a:active {
     font-size: 20;
     text-align: center;
     box-align: justify;
-    color: rgb(231, 206, 255);
-
+    color: rgb(111, 87, 133);
 }
 
 a:visited {
@@ -98,8 +97,11 @@ a:visited {
 @font-face {
     font-family: "Perpetua";
     src: url(/perpetua.ttf);
-    /* src: url(perpetua-light.ttf); */
 }
+
+
+
+
 
 #video_overlay {
     position: fixed;
@@ -118,7 +120,7 @@ a:visited {
     #video_overlay {
         opacity: 1;
     }
-    a {
+    /* a {
     color: rgb(32, 11, 54);
     }
     a:link {
@@ -150,7 +152,7 @@ a:visited {
     }
     h2 {
     color: rgb(32, 11, 54);
-    }
+    } */
 }
 
 body {
