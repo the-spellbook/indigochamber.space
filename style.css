@@ -135,6 +135,9 @@ a:visited {
         margin-bottom: 15px; 
         text-align: right;
     }
+    #spo_emb {
+        width: 650;
+    }
 }
 
 body {
