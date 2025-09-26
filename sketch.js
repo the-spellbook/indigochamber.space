@@ -88,7 +88,7 @@ function draw() {
 
     if (boxcolor > 100) boxcolor = 100;
     stroke(boxcolor);
-    // box(30);
+    box(30);
 
     
     // orbitControl();
