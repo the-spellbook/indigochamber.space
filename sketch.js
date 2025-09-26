@@ -9,7 +9,17 @@ let angle = 0;
 let boxSize = 0;
 let timer = 0;
 let bgblue = 10;
+let scrollY = 0;
+let scrollPos = 0;
 let fallingstartimer = Math.floor(Math.random() * 1001);
+
+function mouseWheelFunction(delta) {
+    scrollY += delta;                     // scrollpositie update door scrolling event
+    if (0 > scrollY) scrollY = 0;               // out of bounds scroll value
+    if (5000 < scrollY) scrollY = 5000;         // ^
+    camera(100,0.3*scrollY-100,100);            // camera pos update
+    if (delta < 0) {boxcolor -= (delta)} else {boxcolor += (delta)};
+}
 
 function setup() {
     noCursor();
@@ -26,13 +36,16 @@ function setup() {
         let z = random(-1200, 1200);
         stars.push(createVector(x, y, z));
     }
+    camera(100,0,100);
+    mouseWheelFunction(1);
 }
 
 
 let radius = 700-boxSize;
-let camX = radius * Math.cos(angle+90);
-let camZ = radius * Math.sin(angle+90);
-let camY = -500;
+// let camX = radius * Math.cos(angle+90);
+// let camZ = radius * Math.sin(angle+90);
+// let camY = -500;
+
 
 function orbitControlJustLeftButton() {
     // remove Wheel actions
@@ -43,21 +56,20 @@ function orbitControlJustLeftButton() {
        orbitControl();  
  }
 
+
+
 function draw() {
     // timer += 1;
     // if (timer == 20) {
-        background(0,0,bgblue);
-    //     timer = 0;
-    // }
-
-    // oude html kleur:rgb(4, 1, 20)
-
-
+        //     timer = 0;
+        // }
+        
+        // oude html kleur:rgb(4, 1, 20)
+        
+        
+    background(0,0,bgblue);
     ambientLight(255);
-
-
-
-
+    // camera(mouseX-(windowWidth/2),mouseY-(windowHeight/2),100);
 
     noStroke();
     fill(boxcolor);
@@ -74,14 +86,18 @@ function draw() {
     stroke(150);
     noFill();
 
-    // if (boxSize > 0) boxSize -= 2;
+    if (boxcolor > 100) boxcolor = 100;
     stroke(boxcolor);
-    box(40);
+    // box(30);
+
     
     // orbitControl();
-    orbitControlJustLeftButton();
+    // orbitControlJustLeftButton();
 
     if (boxcolor > 60) boxcolor -= 2;
+
+    if (boxcolor < 59) boxcolor = 60;
+    console.log(boxcolor);
 
 }
 
@@ -89,19 +105,16 @@ function draw() {
 //     boxcolor = 150;
 // }
 
-
-function mouseDragged() {
-    if (boxcolor < 230) boxcolor += 10;
-    // else {
-    // camera(camX, camY, camZ, 0, 0, 0, 0, 1, 0);
-
-    // angle -= 0.0005;
-    // console.log("cool");
-    // }
+function mouseWheel(event) {
+    mouseWheelFunction(event.delta);
 }
 
-function windowResized() {
-    resizeCanvas(windowWidth, windowHeight);
+
+
+function mouseMoved() { if (boxcolor < 100) boxcolor += 10;
+}
+
+function windowResized() { resizeCanvas(windowWidth, windowHeight);
 }
 
 
