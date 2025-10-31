@@ -1,0 +1,101 @@
+html {
+    width: 100%;
+}
+
+.scrollcont {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.scrolltrack {
+display: inline-flex;
+animation: scroll 30s linear infinite;
+}
+.scrolltrack img {
+width: 100vw;
+height: auto;
+flex-shrink: 0;
+}
+
+.scrollcont {
+    filter: brightness(170%);
+}
+
+
+h1 {
+    letter-spacing: 20px;
+    font-family: Olivetti;
+}
+
+body {
+    background-color: rgb(202, 129, 73);
+    margin-bottom: 0cm;
+    font-family: Fluxisch Else, serif;
+    margin: 0;
+}
+@font-face {
+    font-family: Olivetti;
+    src: url(public/olivetti.ttf);
+}
+
+@font-face {
+    font-family: Fluxisch Else;
+    src: url(public/fluxischelse-regular.otf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: Fluxisch Else;
+    src: url(public/fluxischelse-bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: Fluxisch Else;
+    src: url(public/fluxischelse-light.otf);
+    font-weight: light;
+}
+
+.tablink.active {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+
+.tablink {
+    font-weight: regular;
+    font-size: larger;
+}
+
+.tablink:hover {
+    cursor: pointer;
+}
+
+p {
+    font-size: medium;
+}
+
+.tabcontent {
+    text-align: center;
+    width: 70%;
+    margin: auto;
+}
+
+div.scrollcont {
+    overflow: auto;
+    white-space: nowrap;
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+
+div.scrollcont img {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+  }
+
+.element::-webkit-scrollbar {
+    display: none;
+}
+
