@@ -1,0 +1,162 @@
+div.allthings {
+    width: 100%;
+    /* margin: auto; */
+    /* text-align: center; */
+    font-family: "Perpetua";
+    /* color: rgb(255, 247, 233); */
+    overflow-x: hidden;
+    opacity: 1;
+    color: rgb(248, 248, 248);
+}
+
+canvas {
+    z-index: -1;
+    top:0;
+    left:0;
+}
+
+div.bgimage {
+    background-image: url(public/alosinggame.JPG);
+    background-size: cover;
+    position: fixed;
+    width: 200vb;
+    height: 200vh;
+    z-index: -1;
+    opacity: 0.5;
+    top:0;
+    left:0;
+}
+
+
+
+h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h5 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+h6 {
+    font-size: 25;
+    margin: 5px;
+    box-align: justify;
+}
+
+p {
+    font-size: 20;
+    margin: 5px;
+    text-align: left;
+    box-align: justify;
+    color: #f8f8f8
+}
+
+a {
+    font-weight: 900;
+    font-size: 25;
+
+    box-align: justify;
+    text-decoration: none;
+    text-shadow: 7px 0px 0px #50425c;
+    color: #dfb7ff;
+    /* color: rgb(248, 248, 248); */
+    transition: color 0.5s, margin-left 0.5s, text-shadow 0.5s;
+}
+
+a:link {
+    font-size: 25;
+    box-align: justify;
+    color: rgb(223, 183, 255);
+}
+
+/* a:visited {
+    color: rgb(179, 130, 197);
+    font-size: 20;
+    text-align: center;
+    box-align: justify;
+} */
+
+
+#div5 {transition-timing-function: ease-out;}
+
+a:hover {
+    /* font-style: italic; */
+    box-align: justify;
+    /* color: rgb(223, 183, 255); */
+    color: #f8f8f8;
+    margin-left: 3px;
+    text-shadow: 0px 0px 0px #f8f8f8;
+    transition: color 0.5s, margin-left 0.5s, text-shadow 0.5s;
+}
+
+a:active {
+    /* text-align: center; */
+    box-align: justify;
+}
+
+
+@font-face {
+    font-family: "Perpetua";
+    src: url(/perpetua.ttf);
+}
+
+
+
+
+
+#video_overlay {
+    position: fixed;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    min-height: 100vh;
+    /* min-height: 100%; */
+    background-size: auto;
+    background-repeat: repeat-y;
+    opacity: 0.0;
+    filter: brightness(80%) contrast(110%) hue-rotate(0deg);
+}
+
+@media (max-width:800px) {
+    #myfaceface {
+        display:inline; 
+        width: 100%; 
+        margin-left: 0px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+}
+
+@media (min-width:801px) {
+    #myfaceface {
+        float:right;
+        display:inline; 
+        width: 50%; 
+        margin-left: 15px; 
+        margin-bottom: 15px; 
+        text-align: right;
+    }
+    #spo_emb {
+        width: 650;
+    }
+}
+
+body {
+    padding: 0;
+    margin: 0px 0px 0px;
+    max-width: 83%;
+    max-height: 80%;
+    margin: auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* body {
+    text-align: center;
+    width: 100%;
+    display: flex;
+} */

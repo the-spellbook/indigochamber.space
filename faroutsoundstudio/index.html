@@ -1,0 +1,178 @@
+<html>
+    <head>
+        <title>Far Out</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <br><br><br><br><br>
+        <h1 style="text-align: center;">far out sound studio</h1>
+        <!-- <div class="scrollcont">
+            <img src="public/panoreal.jpg" alt="far out and about" style="width: 100%; height: auto;"><img src="public/panoreal.jpg" alt="far out and about" style="width: 100%; height: auto;"><img src="public/panoreal.jpg" alt="far out and about" style="width: 100%; height: auto;">
+        </div> -->
+        <div class="scrollcont">
+            <div class="scrolltrack">
+              <img src="public/panoreal.jpg" alt="far out and about"></img>
+              <img src="public/panoreal.jpg" alt="far out and about"></img>
+              <img src="public/panoreal.jpg" alt="far out and about"></img>
+              <img src="public/panoreal.jpg" alt="far out and about"></img>
+              <img src="public/panoreal.jpg" alt="far out and about"></img>
+              <img src="public/panoreal.jpg" alt="far out and about"></img>
+            </div>
+          </div>
+        <br>
+        <div class="buttons" style="text-align: center;">
+            <a class="tablink Tab1Button" onclick="openPage('Tab1', this, 'red')" id="defaultOpen">home</a> | 
+            <a class="tablink Tab2Button" onclick="openPage('Tab2', this, 'red')">about</a> | 
+            <a class="tablink Tab3Button" onclick="openPage('Tab3', this, 'red')">contact</a> | 
+            <a class="tablink Tab4Button" onclick="openPage('Tab4', this, 'red')">work</a> | 
+            <a class="tablink Tab5Button" onclick="openPage('Tab5', this, 'red')">gear</a>
+        </div>
+            <div id="Tab1" class="tabcontent">
+            <p>Welcome to Far Out Sound Studio, a cozy analog studio in Rotterdam...</p>
+            </div>
+            <div id="Tab2" class="tabcontent">
+            <p>
+                Far Out Sound Studio, formely known as Duct Tape Studios, is an renowed analog recording studio located in Rotterdam. In the very center works Niek van den Driesschen, a engineer, musician and analog freak.<br>
+                A passionate collector of vintage gear since childhood, his expertise and creative spirit makes him a sought-after collaborator and engineer in the local scene and beyond.<br><br>
+                The studio simply has a great sound, a vocal booth and seperate mixing room, and a hybrid analog/digital recording setup, and loads of rare gear. It's a playground where you can fully indulge in toying with tape, experiment with rare microphones, and reamp your recordings through as many quirky devices as your heart desires.<br>
+
+                
+                
+            </p> 
+            </div>
+
+            <div id="Tab3" class="tabcontent">
+            <p>
+                Get in touch:<br>
+                Bookings: <a href="faroutsoundstudio@gmail.com">faroutsoundstudio@gmail.com</a><br><br><br>
+                Instagram: <a href="https://www.instagram.com/faroutsoundstudio/">@faroutsoundstudio</a><br>
+                Facebook: <a href="https://www.facebook.com/FarOutSoundStudio/">www.facebook.com/FarOutSoundStudio/</a>
+            
+            </p>
+            </div>
+
+            <div id="Tab4" class="tabcontent">
+            <p>work</p>
+            </div>
+
+            <div id="Tab5" class="tabcontent">
+            <p>gear</p>
+            </div>
+
+            <script>
+                function openPage(pageName, elmnt) {
+                    // Hide all tab content
+                    var tabcontent = document.getElementsByClassName("tabcontent");
+                    for (var i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = "none";
+                    }
+            
+                    // Remove "active" class from all tab links
+                    var tablinks = document.getElementsByClassName("tablink");
+                    for (var i = 0; i < tablinks.length; i++) {
+                    tablinks[i].classList.remove("active");
+
+                    }
+            
+                    // Show current tab and underline its button
+                    document.getElementById(pageName).style.display = "block";
+                    elmnt.classList.add("active");
+                }
+            
+                // Automatically open the first tab
+                document.getElementById("defaultOpen").click();
+              </script>
+            </script>
+
+
+
+
+        <!-- <h3 style="text-align: center;">home | about | work | contact | facebook | instagram</h3> -->
+        <a id="db" href="index.html"></a>
+    </body>
+</html>
+
+
+
+<!-- 
+
+
+<html>
+<head>
+  <title>Far Out</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .tablink {
+      cursor: pointer;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+    .tablink.active {
+      text-decoration: underline;
+    }
+    .tabcontent {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <br><br><br><br><br>
+  <h1 style="text-align: center;">far out sound studio</h1>
+
+  <div class="scrollcont">
+    <img src="public/panoreal.jpg" alt="far out and about" style="width: 100%; height: auto;">
+    <img src="public/panoreal.jpg" alt="far out and about" style="width: 100%; height: auto;">
+    <img src="public/panoreal.jpg" alt="far out and about" style="width: 100%; height: auto;">
+  </div>
+
+  <br><br>
+
+  <div class="buttons" style="text-align: center;">
+    <a class="tablink Tab1Button" onclick="openPage('Tab1', this)" id="defaultOpen">home</a> | 
+    <a class="tablink Tab2Button" onclick="openPage('Tab2', this)">about</a> | 
+    <a class="tablink Tab3Button" onclick="openPage('Tab3', this)">contact</a> | 
+    <a class="tablink Tab4Button" onclick="openPage('Tab4', this)">work</a> | 
+    <a class="tablink Tab5Button" onclick="openPage('Tab5', this)">gear</a>
+  </div>
+
+  <div id="Tab1" class="tabcontent">
+    <p>Welcome to Far Out Sound Studio, a cozy analog studio in Rotterdam...</p>
+  </div>
+
+  <div id="Tab2" class="tabcontent">
+    <p>
+      In the very center of Far Out Sound Studio (formerly known as Duct Tape Studios) works Niek van den Driesschen, an engineer/musician and analog freak.<br>
+      A passionate collector of vintage gear, old microphones and dusty organs since childhood, his extensive knowledge of the analog world
+      and creative spirit make him a sought-after collaborator and technical engineer in Rotterdam and beyond.<br>
+    </p> 
+  </div>
+
+  <div id="Tab3" class="tabcontent">
+    <p>
+      Hit Niek up for a cup of coffee:<br>
+      Bookings: <a href="mailto:faroutsoundstudio@gmail.com">faroutsoundstudio@gmail.com</a><br><br><br>
+      Instagram: <a href="https://www.instagram.com/faroutsoundstudio/">@faroutsoundstudio</a><br>
+      Facebook: <a href="https://www.facebook.com/FarOutSoundStudio/">www.facebook.com/FarOutSoundStudio/</a>
+    </p>
+  </div>
+
+  <div id="Tab4" class="tabcontent">
+    <p>work</p>
+  </div>
+
+  <div id="Tab5" class="tabcontent">
+    <p>gear</p>
+  </div>
+
+  <script>
+    function openPage(pageName, elmnt) {
+
+
+    // Automatically open the first tab
+    document.getElementById("defaultOpen").click();
+  </script>
+
+  <a id="db" href="index.html"></a>
+</body>
+</html> -->
