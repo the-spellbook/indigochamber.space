@@ -71,10 +71,10 @@ let randomC = Math.random()*50;
 function draw() {
     timer += 1;
 
-    if (timer > 460) {
+    if (timer > 960) {
         // background(6,0,15,0.1);
     }
-    if (timer == 500) {
+    if (timer == 1000) {
             timer = 0;
             background(10,0,15,150);
             camY = 0;
@@ -83,7 +83,7 @@ function draw() {
             randomC = Math.random()*300;
             coolcam.roll(30);
             // camera.lookAt(randomC,randomC,randomC);
-        }
+    }
 
         
 
@@ -162,9 +162,9 @@ function draw() {
 
 }
 
-function mouseClicked() {
-    background(0, 0, 0, 255);
-}
+// function mouseClicked() {
+//     background(0, 0, 0, 255);
+// }
 
 function mouseWheel(event) {
     mouseWheelFunction(event.delta);
