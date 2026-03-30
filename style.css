@@ -146,8 +146,9 @@ html {
     scroll-behavior: smooth;
 }
 
-/* body {
-    text-align: center;
-    width: 100%;
+.merch_object {
     display: flex;
-} */
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
