@@ -1,17 +1,17 @@
-let testobjectje;
+let testobjectje
 let testobjtext;
 let camera;
 
 function preload() {
-    testobjectje = loadModel('/public/object_assets/testobject/testobject.obj', true);
-    testobjtext = loadImage('/public/object_assets/testobject/testobject.jpg');
+    testobjectje = loadModel('/public/object_assets/flikkendoos/flikkendoos.obj', true);
+    testobjtext = loadImage('/public/object_assets/flikkendoos/flikkendoos.jpg');
     //   testobjectje.setTexture(testobjtext);
 }
 
 function setup() {
         noCursor();
         canvas = createCanvas(300, 300, WEBGL);
-        canvas.parent('testobject');
+        canvas.parent('flikkendoos');
         camera = createCamera();
 }
 
@@ -31,7 +31,7 @@ function draw() {
         
 
         // specularMaterial(50);
-        metalness(50);
+        metalness(255);
 
         texture(testobjtext);
         model(testobjectje);
